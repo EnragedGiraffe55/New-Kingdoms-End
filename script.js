@@ -1,4 +1,4 @@
-/*Please note although this the main branch of Kingdom's End it 
+  /*Please note although this the main branch of Kingdom's End it 
 does not have many features due to the code not 100% working.
 Once a feature has been confirmed to work repeatedly, it will be  added to this ongoing project.*/
 
@@ -135,9 +135,10 @@ this.cameras.main.setZoom(1)
 
 
 function update() {
+  
 //controls
  if (gameState.active){
- }
+ 
 if (gameState.cursors.keyA.isDown) {
     player.setVelocityX(-150);
     player.anims.play('left',true);
@@ -168,7 +169,7 @@ this.physics.moveToObject(enemy3, player, 100);
 this.physics.moveToObject(enemy4, player, 100);
 
 }
-
+}
 
 const config ={
   type: Phaser.AUTO,
