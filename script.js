@@ -39,26 +39,10 @@ function create() {
   enemy3.setCollideWorldBounds(true);
   enemy4.setCollideWorldBounds(true);
 
-  this.physics.add.collider(player, enemy1, function(){
-     if (gameState.cursors.keySpace.isDown){
-       
-     }
-  });
-  this.physics.add.collider(player, enemy2, function(){
-    if (gameState.cursors.keySpace.isDown){
-       
-     }
-  });
-  this.physics.add.collider(player, enemy3, function(){
-    if (gameState.cursors.keySpace.isDown){
-       
-     }
-  });
-  this.physics.add.collider(player, enemy4, function(){
-    if (gameState.cursors.keySpace.isDown){
-       
-     }
-  });
+  this.physics.add.collider(player, enemy1);
+  this.physics.add.collider(player, enemy2);
+  this.physics.add.collider(player, enemy3);
+  this.physics.add.collider(player, enemy4);
 
   this.physics.add.collider(enemy1, enemy2);
   this.physics.add.collider(enemy1, enemy3);
@@ -128,7 +112,7 @@ enemyGroup = this.physics.add.group();
 */
 
 this.cameras.main.setSize(700, 500);
-this.cameras.main.startFollow(player, true, 0.05, 0.05);
+this.cameras.main.startFollow(player, 0.05, 0.05);
 this.cameras.main.setZoom(1)
 
 }
